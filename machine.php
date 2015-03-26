@@ -1,1 +1,1 @@
-Voici la page pour gérer : <?php echo $_GET['machine'] ?>
+Voici la page pour gerer : <?php echo $_GET['machine'] ?>

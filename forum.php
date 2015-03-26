@@ -7,7 +7,7 @@ else
 {
 ?>
 
-Voici la page pour creer son projet !
+Bienvenue sur le forum !
 
 <?php
 }
