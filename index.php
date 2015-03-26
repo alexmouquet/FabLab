@@ -2,29 +2,33 @@
 <html>
 
 <head>
-    <title>FabLab ISEN Lille</title>
-    <link rel="stylesheet" href="css/index.css" />
+    <title>FabLab Isen</title>
+    <link rel="stylesheet" href="index.css" />
+	
 </head>
 
-<body>	
+<body>
+		
 	<header>
 		<a id="headertitle" href="index.php?action=main" style="text-decoration : none">
-			Bienvenue sur le <strong>FabLab Isen Lille</strong>
+		Bienvenue sur le <strong>FabLab Isen Lille</strong>
 		</a>
 	</header>
 
+	
 	<nav>
         <p>
             <span class="navTitle">Projet</span>
-            <a href="index.php?action=projetCreation">Créer un nouveau projet</a>
-            <a href="index.php?action=projetGestion">Gérer son projet</a>
+            <a href="index.php?action=projetCreation">CrÃ©er un nouveau projet</a>
+            <a href="index.php?action=projetGestion">GÃ©rer son projet</a>
         </p>
         <p>
             <span class="navTitle">Machines disponibles</span>
             <a href="index.php?action=machine&machine=imprimante3D">Imprimante 3D</a>
-            <a href="index.php?action=machine&machine=decoupeurLaser">Découpeur Laser</a>
+            <a href="index.php?action=machine&machine=decoupeurLaser">DÃ©coupeur Laser</a>
         </p>
 	</nav>
+	
 	
 	<section>
 		<?php
@@ -36,14 +40,11 @@
 		{
 			include("main.php");
 		}
-		?>
-		
+		?>		
 	</section>
 	
 	<footer>
         <a href="http://www.isen.fr/lille/"><div>Visit Isen Lille Web site</a></div>
     </footer>
-	
 </body>
-
 </html>

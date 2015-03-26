@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'pixels';
+    src: url('pixels.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+	margin: 0px;
+    background-color: #E0FFFF; 
+	background-image: url("background.jpg");
+	background-repeat : no-repeat;
+	background-size: cover; 
+}
+
+header
+{
+	color : #B22222;
+	font-size: 70px;
+	font-family : Courier New;
+	background-color : white;
+	text-align : center;
+	width = 100%;
+}
+
+strong
+{
+	font-family: 'pixels', Arial, serif;
+	color: #008080;
+}
+
+
+nav
+{
+    display: inline-block;
+    width: 15%;
+    vertical-align: top;
+    background-color: aliceblue;
+    margin-left: 0px;
+    padding-left: 4px;
+}
+
+nav a
+{
+	display: block;
+}
+
+.navTitle
+{
+    font-weight: bold;
+}
+
+section
+{
+    margin: auto;
+	display: inline-block;
+    vertical-align: top;
+	width: 55%;
+}
+
+footer
+{
+	color : green;
+	text-align : center;
+	background-color : #66CDAA;
+	bottom : 0; left : 0; right : 0;
+	position : fixed;
+	height : 30px;
+}
