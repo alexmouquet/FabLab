@@ -33,6 +33,22 @@
             <a href="index.php?action=machine&machine=imprimante3D" style="text-decoration : none">Imprimante 3D</a>
             <a href="index.php?action=machine&machine=decoupeurLaser" style="text-decoration : none">Découpeur Laser</a><br>
 			
+			<?php
+			// Si le pseudo et le mdp ont été envoyés et sont pas bons, alors on affiche les parties cachées du menu
+			if ((isset($_POST['pseudo']) AND isset($_POST['pass'])) AND ($_POST['pseudo'] == "elodie" AND $_POST['pass'] == "elo"))
+			{
+			?>
+			<span class="navTitle">Projet</span>
+            <a href="index.php?action=main" style="text-decoration : none">Créer un nouveau projet</a>
+            <a href="index.php?action=main" style="text-decoration : none">Gérer un projet existant<a><br>
+			
+			<span class="navTitle">Communauté</span>
+            <a href="index.php?action=main" style="text-decoration : none">Le forum</a>
+            <a href="index.php?action=main" style="text-decoration : none">Les projets déjà réalisés<a><br>
+			<?php
+			}
+			?>
+			
 			<span class="navTitle">Pratique</span>
             <a href="index.php?action=main" style="text-decoration : none">Comment venir ?</a>
             <a href="index.php?action=main" style="text-decoration : none">Les tarifs</a>
@@ -54,9 +70,14 @@
 		?>		
 	</section>
 
+	<?php
+	// Si le pseudo et le mdp n'ont pas été envoyés ou ne sont pas bons, alors on affiche le formulaire d'identification
+	if (!(isset($_POST['pseudo']) AND isset($_POST['pass'])) OR !($_POST['pseudo'] == "elodie" AND $_POST['pass'] == "elo"))
+	{
+	?>
 	<!--IDENTIFICATION-->
 	<div class="authentification">
-		<form method="post" action="authentification.php">
+		<form method="post" action="index.php">
 		 
 					<h1>Identification :</h1>
 					<label for="pseudo">Pseudo</label> : <input type="text" name="pseudo" id="pseudo" placeholder="entre ton pseudo" size="20"> <br>
@@ -65,6 +86,9 @@
 					<input type="reset" value="Reset" />
 					<input type="submit" value="Valider" />	
  	</div>
+	<?php
+	}
+	?>
 	
 	<!--INSCRIPTION -->
 	<div class="inscription">
