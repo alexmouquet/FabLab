@@ -64,7 +64,7 @@ section
     position:fixed;
     right: 20px;
     top: 100px;
-    height: 150px;
+    height: 170px;
     width : 300px;
     background-color: #4682B4;
     border-radius: 20px;
@@ -78,7 +78,7 @@ section
 .inscription {
     position:fixed;
     right: 20px;
-    top: 300px;
+    top: 330px;
     height: 170px;
     width : 300px;
    background-color: #4682B4;
@@ -89,7 +89,11 @@ section
 .inscription h1{
 	font-size : 20px;
 }
-
+ h2
+ {
+	color : red;
+ }
+ 
 .creerProjet {
     
     right: 900px;

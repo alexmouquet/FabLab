@@ -53,9 +53,9 @@ if ((isset($_POST['pseudo']) AND isset($_POST['pass'])) AND ($_POST['pseudo'] ==
             <a href="index.php?action=machine&machine=decoupeurLaser" style="text-decoration : none">Découpeur Laser</a><br>
 			
 			<?php
-			// Si le pseudo et le mdp ont été envoyés et sont bons ($_SESSION['login'] a été créé au début d'index.php), alors on affiche les parties cachées du menu
+			// Si le pseudo et le mdp ont été envoyés et sont bons ($_SESSION['login'] a été créé au début d'index.php)
 			if (isset($_SESSION['login']))
-			{
+			{ // alors on affiche les parties cachées du menu :
 			?>
 			<span class="navTitle">Projet</span>
             <a href="index.php?action=projetCreation" style="text-decoration : none">Créer un nouveau projet</a>
@@ -107,6 +107,7 @@ if ((isset($_POST['pseudo']) AND isset($_POST['pass'])) AND ($_POST['pseudo'] ==
 						<br>
 						<input type="reset" value="Reset" />
 						<input type="submit" value="Valider" />
+						
 						<?php
 						// Affichage de l'erreur (mauvais pseudo ou mauvais mdp) si l'identification n'a pas réussi
 						if (isset($_POST['pseudo']) AND isset($_POST['pass']))
@@ -142,18 +143,90 @@ if ((isset($_POST['pseudo']) AND isset($_POST['pass'])) AND ($_POST['pseudo'] ==
 	
 	<!--INSCRIPTION -->
 	<div class="inscription">
-		<form method="post" action="inscription.sql">
+		<form method="post" action="index.php">
 		 
 					<h1> Inscription :</h1>
-					<label for="pseudo">Pseudo</label> : <input type="text" name="pseudoInsc" id="pseudoI" placeholder="entre ton pseudo" size="20"> <br>
-					<label for="pseudo">Mail</label> : <input type="text" name="mailInsc" id="mailI" placeholder="entre ton adresse mail" size="20"> <br>
-					<label for="pass">Password</label> : <input type="password" name="passInsc" id="passI" placeholder="entre ton mot de passe" size="20" maxlength="10"> <br>
+					<label for="pseudo">Pseudo</label> : <input type="text" name="newpseudo" id="newpseudo" placeholder="entre ton pseudo" size="20"> <br>
+					<label for="pseudo">Mail</label> : <input type="text" name="newmail" id="newmail" placeholder="entre ton adresse mail" size="20"> <br>
+					<label for="pass">Password</label> : <input type="password" name="newpass" id="newpass" placeholder="entre ton mot de passe" size="20" maxlength="10"> <br>
 					<br>
 					<input type="reset" value="Reset" />
 					<input type="submit" value="Valider" />	
- 	</div>
-	<!-- Partie sql : ajouter le membre à la BDD -->
+ 				
+	<!-- Partie SQL : ajouter le membre à la BDD -->
+	
+	<?php // connection à mySQL via PDO sur la base  :
+	try
+	{
+		$bdd = new PDO('mysql:host=localhost;dbname=projetfablab', 'root', ''); // création de l'objet $bdd
+	}
+					
+	catch(Exception $e) 
+	{
+		die('Erreur : '.$e->getMessage());
+	}
+	
+	
+	$inscription = false; // variable pour tester si qqun utilise le formulaire d'inscription :
+	
+	if(isset($_POST['newpseudo']) AND isset($_POST['newmail']) AND isset($_POST['newpass']))
+	{
+		$inscription = true;
+	}
+	
+	$pseudoexist = false; // variable pour tester si le nouveau pseudo n'existe pas déjà
+	$mailexist = false; //variable pour tester si le nouveau mail n'existe pas déjà
+	
+	// on vérifie que le mail et le name entrés à l'inscription ne sont pas déjà pris :
+	$reponse = $bdd->query('SELECT name, mail FROM member');
+	while ($donnees = $reponse->fetch())
+	{
+		if ($inscription == true)
+		{	
+			if($donnees['name'] == $_POST['newpseudo'])
+			{
+				$pseudoexist = true;
+			}
+			if($donnees['mail'] == $_POST['newmail'])
+			{
+				$mailexist = true;
+			} 
+		}
 		
+	}
+	
+	if($inscription == true){		
+		//  si un nouveau membre s'inscrit et que ni le mail ni le pseudo n'existe pas déjà dans la BDD :
+		if ($pseudoexist == false AND $mailexist == false){
+			
+			$insert = $bdd->prepare('insert into member(name, mail, pass) values(:newpseudo, :newmail, :newpass)');
+			$insert->execute(array(
+				'newpseudo' => $_POST['newpseudo'],
+				'newmail' => $_POST['newmail'],
+				'newpass' => $_POST['newpass']
+				));
+				?>
+					<h2>inscription validée</h2>
+				<?php
+		}
+	
+		// si qqun s'inscrit ET que le membre existe déjà, message d'erreur et la requete d'inscription n'aura pas été exécutée :
+		if($pseudoexist == true)
+		{
+		?>
+			<h2>pseudo déjà utilisé</h2>
+		<?php
+		}
+		if($mailexist == true)
+		{
+		?>
+			<h2>mail déjà utilisé</h2>
+		<?php
+		}
+	} 
+	?>
+	</div>
+			
 	<!--PIED-DE-PAGE-->	
 	<footer>
         <a href="http://www.isen.fr/lille/"><div>Visit Isen Lille Web site</a></div>
