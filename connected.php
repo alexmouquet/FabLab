@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>FabLab Isen</title>
-    <link rel="stylesheet" href="index.css" />
-	<meta charset="utf-8" />
-	<!--[if lt IE 9]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-	
-</head>
-
-
 <!--BODY-->
 <body link="#000000" vlink="#000000" alink="#000000">
 		
@@ -33,11 +19,19 @@
             <a href="index.php?action=machine&machine=imprimante3D" style="text-decoration : none">Imprimante 3D</a>
             <a href="index.php?action=machine&machine=decoupeurLaser" style="text-decoration : none">Découpeur Laser</a><br>
 			
+			<span class="navTitle">Projet</span>
+            <a href="index.php?action=main" style="text-decoration : none">Créer un nouveau projet</a>
+            <a href="index.php?action=main" style="text-decoration : none">Gérer un projet existant<a><br>
+			
+			<span class="navTitle">Communauté</span>
+            <a href="index.php?action=main" style="text-decoration : none">Le forum</a>
+            <a href="index.php?action=main" style="text-decoration : none">Les projets déjà réalisés<a><br>
+						
 			<span class="navTitle">Pratique</span>
             <a href="index.php?action=main" style="text-decoration : none">Comment venir ?</a>
             <a href="index.php?action=main" style="text-decoration : none">Les tarifs</a>
 			<a href="index.php?action=main" style="text-decoration : none">FAQ</a>
-        </p>
+		</p>
 	</nav>
 	
 	<!--PAGE CENTRALE-->
@@ -54,17 +48,6 @@
 		?>		
 	</section>
 	
-	<!--IDENTIFICATION-->
-	<div class="authentification">
-		<form method="post" action="authentification.php">
-		 
-					<h1>Identification :</h1>
-					<label for="pseudo">Prénom</label> : <input type="text" name="pseudo" id="pseudo" placeholder="nom" size="20"/required> <br>
-					<label for="pass">Password</label> : <input type="password" name="pass" id="pass" placeholder="mot de passe" size="20" maxlength="10" /required> <br>
-					<br>
-					<input type="reset" value="Reset" />
-					<input type="submit" value="Valider" />	
- 	</div>
 	
 	<!--PIED-DE-PAGE-->	
 	<footer>

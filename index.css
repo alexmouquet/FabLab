@@ -24,7 +24,7 @@ header
 	width = 100%;
 }
 
-strong
+header strong
 {
 	font-family: 'pixels', Arial, serif;
 	color: #008080;
@@ -49,6 +49,7 @@ nav a
 .navTitle
 {
     font-weight: bold;
+	color : #4682B4;
 }
 
 section
@@ -59,9 +60,23 @@ section
 	width: 55%;
 }
 
+.authentification {
+    position:fixed;
+    right: 20px;
+    top: 100px;
+    height: 150px;
+    width : 300px;
+    background-color: #4682B4;
+    border-radius: 20px;
+	text-align : center;
+}
+
+.authentification h1{
+	font-size : 20px;
+}
+
 footer
 {
-	color : green;
 	text-align : center;
 	background-color : #66CDAA;
 	bottom : 0; left : 0; right : 0;
