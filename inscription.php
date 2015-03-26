@@ -13,7 +13,7 @@
 				
 	<!-- Partie SQL : ajouter le membre à la BDD -->
 	
-	<?php	
+<?php	
 	$inscription = false; // variable pour tester si qqun utilise le formulaire d'inscription :
 	
 	if(isset($_POST['newpseudo']) AND isset($_POST['newmail']) AND isset($_POST['newpass']))

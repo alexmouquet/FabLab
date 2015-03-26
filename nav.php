@@ -17,13 +17,20 @@
             <a href="index.php?action=projetCreation" style="text-decoration : none">Créer un nouveau projet</a>
             <a href="index.php?action=projetGestion" style="text-decoration : none">Gérer un projet existant<a><br>
 			
+						
 			<span class="navTitle">Communauté</span>
             <a href="index.php?action=forum" style="text-decoration : none">Le forum</a>
-            <a href="index.php?action=projetsRealises" style="text-decoration : none">Les projets déjà réalisés<a><br>
-			<?php
+            <a href="index.php?action=projetsRealises" style="text-decoration : none">Les projets déjà réalisés<a>
+			<?php 
+			// développer la liste des projets existants au fur et à mesure des créations de projet :
+				$reponse = $bdd->query('SELECT title FROM project');
+				while ($donnees = $reponse->fetch()){
+					?> <a href="index.php?action=projetsRealises" style="text-decoration : none"> --><?php echo $donnees['title'] ?><a>
+				<?php
+				}
 			}
 			?>
-			
+			<br>
 			<span class="navTitle">Pratique</span>
             <a href="index.php?action=acces" style="text-decoration : none">Comment venir ?</a>
             <a href="index.php?action=tarifs" style="text-decoration : none">Les tarifs</a>

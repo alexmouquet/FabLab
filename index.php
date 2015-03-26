@@ -67,8 +67,8 @@ if (isset($_POST['pseudo']) AND isset($_POST['pass']))
 	
 	
 	<!--blocs identification ou inscription-->
-	<a class = "authentification" href="index.php?action=identification" title="identification" style="text-decoration : none"><h1>J'aimerais m'identifier</h1></a>
-	<a class = "inscription"  href="index.php?action=inscription" title="inscription" style="text-decoration : none"><h1>J'aimerais m'inscrire</h1></a>
+	<a class = "authentification" href="index.php?action=identification" title="identification" style="text-decoration : none"><h1>Identification</h1></a>
+	<a class = "inscription"  href="index.php?action=inscription" title="inscription" style="text-decoration : none"><h1>Inscription</h1></a>
 	
 	
 	<!--PAGE CENTRALE-->
@@ -85,16 +85,22 @@ if (isset($_POST['pseudo']) AND isset($_POST['pass']))
 		?>		
 	</section>
 	
-	
+	<!-- Déconnexion-->	
+		
 	<?php
 	if (isset($_SESSION['login']))
 	{
-	?>
+	?>	
+		<div class="logout">
+		<p>Bonjour <?php echo $_SESSION['login'] ?> !<p>
 		<!-- Lien pour se déconnecter qui détruira la session actuelle (cf début de index.php) (lien affiché seulement si l'on est connecté) -->
-		<p><a href="index.php?action=logout" title="Déconnexion">Se déconnecter</a></p>
+		<a href="index.php?action=logout" title="Deconnexion" style="text-decoration : none">Me déconnecter</a>
+		</div>
 	<?php
 	}
 	?>
+	
+	
 				
 	<!--PIED-DE-PAGE-->	
 	<footer>

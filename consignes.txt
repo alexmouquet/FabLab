@@ -16,3 +16,11 @@ tâches :
 - insérer l'appli google Maps dans comment venir
 
 - utiliser les fonctions, des classes, des sous-dossiers
+
+
+RMQ :
+- sécurité plus développée pour la partie inscription (how ?)
+- créer page "creer un projet" sous un aspect sans header et footer
+--> avec un formulaire relié à la BDD
+--> afficher le projet créee dans le Nav, section "projets existants"
+- faire un doc à part pour header et footer

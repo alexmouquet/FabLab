@@ -60,33 +60,39 @@ section
 	width: 55%;
 }
 
-.authentification {
+.authentification 
+{
     position:fixed;
     right: 20px;
-    top: 100px;
-    height: 170px;
-    width : 300px;
+    top: 200px;
+    height: 20%;
+    width : 15%;
     background-color: #4682B4;
     border-radius: 20px;
 	text-align : center;
 }
 
-.authentification h1{
+.authentification h1
+{
 	font-size : 20px;
+	font-family: 'pixels', Arial;
 }
 
-.inscription {
+.inscription 
+{
     position:fixed;
     right: 20px;
-    top: 330px;
-    height: 170px;
-    width : 300px;
+    top: 430px;
+    height: 20%px;
+    width : 15%;
    background-color: #4682B4;
     border-radius: 20px;
 	text-align : center;
 }
 
-.inscription h1{
+.inscription h1
+{
+	font-family: 'pixels', Arial;
 	font-size : 20px;
 }
  h2
@@ -94,8 +100,19 @@ section
 	color : red;
  }
  
-.creerProjet {
-    
+.logout
+{
+	position:fixed;
+    right: 20px;
+    top: 80px;
+    height: 70px;
+    width : 300px;
+	background-color: #E6E6FA;
+    text-align : center;
+}
+ 
+.creerProjet 
+{
     right: 900px;
     top: 200px;
     height: 230px;
