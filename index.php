@@ -53,19 +53,33 @@
 		}
 		?>		
 	</section>
-	
+
 	<!--IDENTIFICATION-->
 	<div class="authentification">
 		<form method="post" action="authentification.php">
 		 
 					<h1>Identification :</h1>
-					<label for="pseudo">Prénom</label> : <input type="text" name="pseudo" id="pseudo" placeholder="nom" size="20"/required> <br>
-					<label for="pass">Password</label> : <input type="password" name="pass" id="pass" placeholder="mot de passe" size="20" maxlength="10" /required> <br>
+					<label for="pseudo">Pseudo</label> : <input type="text" name="pseudo" id="pseudo" placeholder="entre ton pseudo" size="20"> <br>
+					<label for="pass">Password</label> : <input type="password" name="pass" id="pass" placeholder="entre ton mot de passe" size="20" maxlength="10"> <br>
 					<br>
 					<input type="reset" value="Reset" />
 					<input type="submit" value="Valider" />	
  	</div>
 	
+	<!--INSCRIPTION -->
+	<div class="inscription">
+		<form method="post" action="inscription.sql">
+		 
+					<h1> Inscription :</h1>
+					<label for="pseudo">Pseudo</label> : <input type="text" name="pseudoInsc" id="pseudoI" placeholder="entre ton pseudo" size="20"> <br>
+					<label for="pseudo">Mail</label> : <input type="text" name="mailInsc" id="mailI" placeholder="entre ton adresse mail" size="20"> <br>
+					<label for="pass">Password</label> : <input type="password" name="passInsc" id="passI" placeholder="entre ton mot de passe" size="20" maxlength="10"> <br>
+					<br>
+					<input type="reset" value="Reset" />
+					<input type="submit" value="Valider" />	
+ 	</div>
+	<!-- Partie sql : ajouter le membre à la BDD -->
+		
 	<!--PIED-DE-PAGE-->	
 	<footer>
         <a href="http://www.isen.fr/lille/"><div>Visit Isen Lille Web site</a></div>

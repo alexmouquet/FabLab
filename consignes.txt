@@ -1,6 +1,18 @@
 Créer un site Web  :
 - Utiliser une BDD
-- Utiliser les classes
+- Utiliser les classes (facultatif)
 - Au moins 2 formulaires (1 formulaire = page avec des champs de saisie)
-- Au moins 5 pages
+- Au moins 5 pages (dont certaines ne contenant pas l'en tete)
 - Mettre un bordereau d'en-tête
+
+tâches : 
+- faire le lien avec la BDD :
+ --> pouvoir l'agrandir sur une page inscription (pseudo, login, mail)
+ --> aller chercher les infos lors de l'authentification
+- rester connecté lors de la navigation 
+- créer une fonction "déconnection" pour pouvoir changer d'utilisateur
+- créer les contenu des différentes pages avec un design différent 
+- petit logo en haut à gauche pour revenir à l'acceuil
+- insérer l'appli google Maps dans comment venir
+
+- utiliser les fonctions, des classes, des sous-dossiers

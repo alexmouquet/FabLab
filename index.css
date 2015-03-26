@@ -75,6 +75,32 @@ section
 	font-size : 20px;
 }
 
+.inscription {
+    position:fixed;
+    right: 20px;
+    top: 300px;
+    height: 170px;
+    width : 300px;
+   background-color: #4682B4;
+    border-radius: 20px;
+	text-align : center;
+}
+
+.inscription h1{
+	font-size : 20px;
+}
+
+.creerProjet {
+    
+    right: 900px;
+    top: 200px;
+    height: 230px;
+    width : 230px;
+    background-image: url("projetBackground.jpg");
+    border-radius: 20px;
+	text-align : center;
+}
+
 footer
 {
 	text-align : center;

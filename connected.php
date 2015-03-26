@@ -45,7 +45,10 @@
 		{
 			include("main.php");
 		}
-		?>		
+		?>
+		<a href="index.php?action=main">
+		<div class="creerProjet">			
+		</div></a>
 	</section>
 	
 	
