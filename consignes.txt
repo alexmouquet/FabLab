@@ -1,0 +1,6 @@
+Créer un site Web  :
+- Utiliser une BDD
+- Utiliser les classes
+- Au moins 2 formulaires (1 formulaire = page avec des champs de saisie)
+- Au moins 5 pages
+- Mettre un bordereau d'en-tête
