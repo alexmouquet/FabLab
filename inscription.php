@@ -1,6 +1,6 @@
 <!--INSCRIPTION -->
 	<div class="inscription">
-		<form method="post" action="index.php">
+		<form method="post" action="index.php?action=inscription">
 		 
 					<h1> Inscription :</h1>
 					<label for="pseudo">Pseudo</label> : <input type="text" name="newpseudo" id="newpseudo" placeholder="entre ton pseudo" size="20"> <br>
@@ -10,20 +10,10 @@
 					<input type="reset" value="Reset" />
 					<input type="submit" value="Valider" />	
  				
+				
 	<!-- Partie SQL : ajouter le membre à la BDD -->
 	
-	<?php // connection à mySQL via PDO sur la base  :
-	try
-	{
-		$bdd = new PDO('mysql:host=localhost;dbname=projetfablab', 'root', ''); // création de l'objet $bdd
-	}
-					
-	catch(Exception $e) 
-	{
-		die('Erreur : '.$e->getMessage());
-	}
-	
-	
+	<?php	
 	$inscription = false; // variable pour tester si qqun utilise le formulaire d'inscription :
 	
 	if(isset($_POST['newpseudo']) AND isset($_POST['newmail']) AND isset($_POST['newpass']))

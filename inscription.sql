@@ -1,1 +1,0 @@
-insert into member (pseudo, mail, pass) select '$_POST['pseudoInsc']', '$_POST['mailInsc']', '$_POST['passInsc']';
