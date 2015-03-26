@@ -1,0 +1,1 @@
+Voici la page pour gérer : <?php echo $_GET['machine'] ?>

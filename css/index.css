@@ -1,46 +1,37 @@
-@font-face {
-    font-family: 'pixels';
-    src: url('V5PRC___.TTF') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+*
+{
+    font-family: arial;
 }
 
 body
 {
-	margin-top : 0px;
-	margin-left : 0px;
-	margin-right : 0px;
-	margin-bottom : 0px;
-    background-color: #E0FFFF; 
-	background-image: url("images/background.jpg");
-	background-repeat : no-repeat;
-	background-size: cover; 
-    color: white; 
+    margin: 0px;
 }
 
-header
+nav
 {
-	color : #B22222;
-	font-size: 70px;
-	font-family : Courier New;
-	background-color : white;
-	text-align : center;
-	width = 100%;
+    display: inline-block;
+    width: 15%;
+    vertical-align: top;
+    background-color: aliceblue;
+    margin-left: 0px;
+    padding-left: 4px;
 }
 
-header strong
+nav a
 {
-	font-family: 'pixels', Arial, serif;
-	color: #008080;
+	display: block;
 }
 
-
-footer/* pied de page */
+.navTitle
 {
-	color : green;
-	text-align : center;
-	background-color : #66CDAA;
-	bottom : 0; left : 0; right : 0;
-	position : fixed;
-	height : 30px;
+    font-weight: bold;
+}
+
+section
+{
+    margin: auto;
+	display: inline-block;
+    vertical-align: top;
+	width: 55%;
 }
