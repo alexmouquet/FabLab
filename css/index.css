@@ -1,11 +1,37 @@
-*
+@font-face {
+    font-family: 'pixels';
+    src: url('V5PRC___.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header
 {
-    font-family: arial;
+	color: #B22222;
+	font-size: 70px;
+	font-family: Courier New;
+	background-color: white;
+	text-align: center;
+	width = 100%;
+}
+
+header strong
+{
+	font-family: 'pixels', Arial, serif;
+	color: #008080;
 }
 
 body
 {
     margin: 0px;
+	margin-top : 0px;
+	margin-left : 0px;
+	margin-right : 0px;
+	margin-bottom : 0px;
+    background-color: #E0FFFF; 
+	background-image: url("images/background.jpg");
+	background-repeat : no-repeat;
+	background-size: cover; 
 }
 
 nav
@@ -34,4 +60,14 @@ section
 	display: inline-block;
     vertical-align: top;
 	width: 55%;
+}
+
+footer /* pied de page */
+{
+	color: green;
+	text-align: center;
+	background-color: #66CDAA;
+	bottom: 0; left: 0; right: 0;
+	position: fixed;
+	height: 30px;
 }

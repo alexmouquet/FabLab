@@ -6,7 +6,13 @@
     <link rel="stylesheet" href="css/index.css" />
 </head>
 
-<body>
+<body>	
+	<header>
+		<a id="headertitle" href="index.php?action=main" style="text-decoration : none">
+			Bienvenue sur le <strong>FabLab Isen Lille</strong>
+		</a>
+	</header>
+
 	<nav>
         <p>
             <span class="navTitle">Projet</span>
@@ -33,6 +39,10 @@
 		?>
 		
 	</section>
+	
+	<footer>
+        <a href="http://www.isen.fr/lille/"><div>Visit Isen Lille Web site</a></div>
+    </footer>
 	
 </body>
 
