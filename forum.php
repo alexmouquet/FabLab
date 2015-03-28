@@ -7,7 +7,7 @@ else
 {
 ?>
 
-Bienvenue sur le forum !
+<img src="images/forum.gif">
 
 <?php
 }

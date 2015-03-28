@@ -1,1 +1,1 @@
-Bienvenue sur le site du FabLab ISEN Lille !
+<img src = "images/atrium.jpg" >

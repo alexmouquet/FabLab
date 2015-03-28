@@ -1,12 +1,12 @@
+<img src = "images/newproject.jpg">
 <?php
-if (!(isset($_SESSION['login'])))
-{
-	echo ('Eh non petit malin ! Il faut d\'abord te connecter pour avoir acces a cette page ;)');
-}
-else
-{
+	if (!(isset($_SESSION['login'])))
+	{
+		echo ('Eh non petit malin ! Il faut d\'abord te connecter pour avoir acces a cette page ;)');
+	}
+	else
+	{
 ?>
-<img src="projetBackground.jpg"></img>
 
 <!-- Formulaire à remplir pour créer un nouveau projet -->
 <form method="post" action="index.php?action=projetCreation">
@@ -26,7 +26,6 @@ De quelle machine aurez-vous besoin ?<br>
 
 
 <!-- Partie SQL : ajouter le projet à la BDD -->
-	
 <?php	
 
 	if(isset($_POST['title']) AND isset($_POST['machine']) AND isset($_POST['description']))

@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'pixels';
-    src: url('pixels.TTF') format('truetype');
+    src: url('../font/pixels.TTF') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -9,7 +9,7 @@ body
 {
 	margin: 0px;
     background-color: #E0FFFF; 
-	background-image: url("background.jpg");
+	background-image: url("../images/background.jpg");
 	background-repeat : no-repeat;
 	background-size: cover; 
 }
@@ -30,6 +30,10 @@ header strong
 	color: #008080;
 }
 
+.presentation h3
+{
+	color : #008080;
+}
 
 nav
 {
@@ -65,7 +69,6 @@ section
     position:fixed;
     right: 20px;
     top: 200px;
-    height: 20%;
     width : 15%;
     background-color: #4682B4;
     border-radius: 20px;
@@ -83,9 +86,8 @@ section
     position:fixed;
     right: 20px;
     top: 430px;
-    height: 20%px;
     width : 15%;
-   background-color: #4682B4;
+    background-color: #4682B4;
     border-radius: 20px;
 	text-align : center;
 }
@@ -95,10 +97,25 @@ section
 	font-family: 'pixels', Arial;
 	font-size : 20px;
 }
- h2
+
+h2
  {
 	color : red;
  }
+ 
+h4
+ {
+	font-family: 'pixels', Arial, serif;
+	color : #8A2BE2;
+ }
+ 
+.tuto
+{
+    width : 15%;
+    background-color: #D8BFD8;
+    border-radius: 20px;
+	text-align : center;
+}
  
 .logout
 {
@@ -110,22 +127,11 @@ section
 	background-color: #E6E6FA;
     text-align : center;
 }
- 
-.creerProjet 
-{
-    right: 900px;
-    top: 200px;
-    height: 230px;
-    width : 230px;
-    background-image: url("projetBackground.jpg");
-    border-radius: 20px;
-	text-align : center;
-}
 
 footer
 {
 	text-align : center;
-	background-color : #66CDAA;
+	background-color : #005070;
 	bottom : 0; left : 0; right : 0;
 	position : fixed;
 	height : 30px;

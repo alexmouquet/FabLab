@@ -1,18 +1,17 @@
 <!--INSCRIPTION -->
-	<div class="inscription">
-		<form method="post" action="index.php?action=inscription">
+<div class="inscription">
+	<form method="post" action="index.php?action=<?php echo $_GET['action'] ?>&button=inscription">
 		 
-					<h1> Inscription :</h1>
-					<label for="pseudo">Pseudo</label> : <input type="text" name="newpseudo" id="newpseudo" placeholder="entre ton pseudo" size="20"> <br>
-					<label for="pseudo">Mail</label> : <input type="text" name="newmail" id="newmail" placeholder="entre ton adresse mail" size="20"> <br>
-					<label for="pass">Password</label> : <input type="password" name="newpass" id="newpass" placeholder="entre ton mot de passe" size="20" maxlength="10"> <br>
-					<br>
-					<input type="reset" value="Reset" />
-					<input type="submit" value="Valider" />	
+		<h1> Inscription :</h1>
+		<label for="pseudo">Pseudo</label> : <input type="text" name="newpseudo" id="newpseudo" placeholder="entre ton pseudo" size="20"> <br>
+		<label for="pseudo">Mail</label> : <input type="text" name="newmail" id="newmail" placeholder="entre ton adresse mail" size="20"> <br>
+		<label for="pass">Password</label> : <input type="password" name="newpass" id="newpass" placeholder="entre ton mot de passe" size="20" maxlength="10"> <br>
+		<br>
+		<input type="reset" value="Reset" />
+		<input type="submit" value="Valider" />	
  				
 				
-	<!-- Partie SQL : ajouter le membre à la BDD -->
-	
+<!-- Partie SQL : ajouter le membre à la BDD -->
 <?php	
 	$inscription = false; // variable pour tester si qqun utilise le formulaire d'inscription :
 	
@@ -34,12 +33,12 @@
 			{
 				$pseudoexist = true;
 			}
+			
 			if($donnees['mail'] == $_POST['newmail'])
 			{
 				$mailexist = true;
 			} 
 		}
-		
 	}
 	
 	if($inscription == true){		
@@ -53,7 +52,7 @@
 				'newpass' => $_POST['newpass']
 				));
 				?>
-					<h2>inscription validée</h2>
+					<h2>inscription validée !</h2>
 				<?php
 		}
 	
@@ -72,4 +71,4 @@
 		}
 	} 
 	?>
-	</div>
+</div>

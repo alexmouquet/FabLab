@@ -1,1 +1,1 @@
-Bienvenue sur la FAQ !
+<img src = "images/FAQ.jpg">

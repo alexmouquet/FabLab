@@ -12,7 +12,7 @@
 		
 		<!--IDENTIFICATION-->
 		<div class="authentification">
-			<form method="post" action="index.php?action=identification">
+			<form method="post" action="index.php?action=<?php echo $_GET['action'] ?>&button=identification">
 		 
 						<h1>Identification :</h1>
 						<label for="pseudo">Pseudo</label> : <input type="text" name="pseudo" id="pseudo" placeholder="entre ton pseudo" size="20"> <br>
@@ -37,13 +37,14 @@
 										break;
 									}
 								}
-								else
+							}
+							// si on a parcouru tout le tableau mais qu'aucun nom ne correspond à celui que l'utilisateur a entré : 
+							if($donnees['name'] != $_POST['pseudo'])
 								{
 									$mauvaisPseudo = true;
-									break;
 								}
-							}
-							
+								
+							// affichage des messages d'erreur : 	
 							if ($mauvaisPseudo == true)
 							{
 								echo('Mauvais pseudo');
@@ -61,5 +62,5 @@
 		?>
 		</div>
 	<?php
-	}						 // DELETE FROM `projetfablab`.`member` WHERE `member`.`id_member` = 27;
-	?>
+	}
+?>
