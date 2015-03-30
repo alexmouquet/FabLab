@@ -45,8 +45,8 @@ insert into project (title,description,machines) select 'Impression de balles de
 
 3. Modify, if needed, this code corresponding to the database connection in `session.php` file:
 
-```bash
+    ```bash
 $bdd = new PDO('mysql:host=localhost;dbname=projetfablab', 'root', '');
-```
+    ```
 
 
